@@ -1,0 +1,30 @@
+.divFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 209px;
+  background-color: black;
+  // margin-top: 60px;
+
+  .divFooter__logo {
+    width: 122px;
+  }
+
+  .divFooter__copyright {
+    color: white;
+    font-size: 24px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .divFooter {
+    justify-content: center;
+    gap: 10px;
+    .divFooter__copyright {
+      font-size: 12px;
+      width: 130px;
+    }
+  }
+}
