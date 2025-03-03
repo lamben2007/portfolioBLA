@@ -2,18 +2,69 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 209px;
-  background-color: black;
-  // margin-top: 60px;
+  justify-content: space-between;
+  background-color: #333333;
+  padding: 20px;
+  gap: 20px;
 
-  .divFooter__logo {
-    width: 122px;
+  .divFooter1 {
+    display: flex;
+    flex-direction: row;
+    // background-color: pink;
+    width: 100%;
+    justify-content: space-around;
+
+
+    .circlePicture {
+      width: 300px;
+      height: 300px;
+      border: 3px solid white;
+    }
+
+    .navbar__btn {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-evenly;
+      height: 199px;
+      font-weight: bold;
+      /* background: pink; */
+
+      .navbar__link {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+
+        &--underline {
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    .socialNetwork {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 50px;
+      padding: 18px;
+      border: 3px solid white;
+
+      span {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
   }
 
-  .divFooter__copyright {
-    color: white;
-    font-size: 24px;
+  .divFooter2 {
+    // background-color: blue;
+    width: 100%;
+
+    .divFooter__copyright {
+      color: white;
+      font-size: 24px;
+    }
   }
 }
 

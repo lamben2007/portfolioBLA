@@ -1,0 +1,19 @@
+.divContact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 25px 45px;
+    background: radial-gradient(circle, #d5d5d5, gray);
+
+  
+  }
+  
+  /* Responsive styles for small devices */
+  @media (max-width: 767.98px) {
+    .divContact {
+      row-gap: 0px;
+      padding: 0px 45px;
+     
+    }
+  }
+  

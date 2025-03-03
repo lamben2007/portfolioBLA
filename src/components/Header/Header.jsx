@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import picLogo from '../../assets/logo.png';
 import './Header.scss'
 
 /**
@@ -12,7 +11,12 @@ function Header() {
   return (
 
     <nav className="navbar">
-      <img className="navbar__logo" src={picLogo} alt="Logo Kasa" />
+
+      <div className="navbar_text">
+        <span>DEVELOPPEUR WEB</span>
+      </div>
+
+   
 
       <div className='navbar__btn'>
 
@@ -24,13 +28,21 @@ function Header() {
           Accueil
         </NavLink>
 
-
         <NavLink
-          to="/about"
+          to="/myprojects"
           className={({ isActive }) => (isActive ? 'navbar__link navbar__link--underline' : 'navbar__link')}
           end
         >
-          A Propos
+          Mes réalisations
+        </NavLink>
+
+
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? 'navbar__link navbar__link--underline' : 'navbar__link')}
+          end
+        >
+          Contact
         </NavLink>
 
       </div>

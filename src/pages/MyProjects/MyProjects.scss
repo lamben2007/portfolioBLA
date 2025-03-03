@@ -1,0 +1,46 @@
+.divMyProjects {
+  //   background: red;
+  border: 1px solid black;
+  font-family: "DM Serif Text";
+  font-size: 20px;
+
+  h2{
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  h3{
+    font-weight: bold;
+    font-size: 20px;
+    color: #175bbd;
+    border-bottom: 4px solid black;
+  }
+
+  .title {
+    font-size: 45px;
+    color: #000000;
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
+
+  .projectCards {
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: pink;
+    padding: 10px;
+
+    .projectCard {
+      display: flex;
+      flex-direction: column;
+      background-color: #dad8d4;
+      width: 50%;
+      text-align: start;
+      border-radius: 15px;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+      gap: 20px;
+      padding: 10px;
+
+
+    }
+  }
+}
