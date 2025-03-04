@@ -1,11 +1,17 @@
-// import { useEffect, useState } from 'react';
-import './Home.scss';
+import { ProgressBar, Badge } from "react-bootstrap";
 import picHome2 from '../../assets/home2.webp';
+import picHome from '../../assets/home.webp';
 import logoCSS from '../../assets/css.svg';
 import logoHTML from '../../assets/html.svg';
 import logoJS from '../../assets/javascript.svg';
-import { ProgressBar } from "react-bootstrap";
-
+import logoREACT from '../../assets/react.svg';
+import logoRedux from '../../assets/redux.svg';
+import logoSass from '../../assets/sass.svg';
+import logoTypeScript from '../../assets/typescript.svg';
+import logoNodeJS from '../../assets/node.svg';
+import logoNestJS from '../../assets/nestJS.svg';
+import logoMongoDB from '../../assets/mongodb.svg';
+import './Home.scss';
 
 //
 function Home() {
@@ -15,40 +21,70 @@ function Home() {
     { "urlLogo": logoCSS, "title": "CSS", "pourcentage": 80 },
     { "urlLogo": logoHTML, "title": "HTML", "pourcentage": 70 },
     { "urlLogo": logoJS, "title": "JS", "pourcentage": 85 },
+    { "urlLogo": logoREACT, "title": "REACT", "pourcentage": 85 },
+    { "urlLogo": logoRedux, "title": "REDUX (toolkit)", "pourcentage": 50 },
+    { "urlLogo": logoSass, "title": "SASS", "pourcentage": 65 },
+    { "urlLogo": logoTypeScript, "title": "TYPESCRIPT", "pourcentage": 20 },
+    { "urlLogo": logoNodeJS, "title": "NODEJS", "pourcentage": 60 },
+    { "urlLogo": logoNestJS, "title": "NESTJS", "pourcentage": 10 },
+    { "urlLogo": logoMongoDB, "title": "MONGODB", "pourcentage": 50 }
   ]
-
-
 
   //
   return (
     <div className="divHome">
 
-      <div className='section1'>
+      <section className='section1'>
         <img className="imgHome" src={picHome2} alt="picHome2" />
         <div className="text-overlay">Bonjour, Je suis Benoît Développeur FRONT-END</div>
-        <div className="text2-overlay">Texte2</div>
-      </div>
+        {/* <div className="text2-overlay">Texte2</div> */}
+      </section>
 
+      <section className='section2'>
 
+        <h2><strong>Passionné par l’Informatique et le Développement </strong></h2>
+        <p>---</p>
 
-      <div className='section2'>
-        <h1>Présentation</h1>
-        <p> Présenter au moins 2 projets sur lesquels vous avez travaillé, durant votre formation ou ailleurs. Pour chaque projet, il faudra afficher :
-          une courte description de votre réalisation ;</p>
         <p>
-          les problématiques que vous avez rencontrées et comment vous les avez surmontées ;
-          les compétences qu’il vous a permis de développer ;
-          un lien vers le code ou le site (sur GitHub, par exemple).
+          Depuis toujours, le développement informatique est une véritable passion pour moi. Mon parcours a commencé avec la programmation en Basic sur un MSX,
+          où je créais mes premiers petits jeux. Cette curiosité m&apos;a naturellement conduit à explorer différentes technologies telles que Turbo Pascal,
+          C et Visual Basic 6.
         </p>
-      </div>
 
+        <p>
+          Après un <strong>BTS Électrotechnique</strong>, j’ai souhaité allier mes compétences techniques et mon intérêt pour le développement, ce qui m’a amené à travailler
+          dans le domaine de l’<strong>informatique industrielle</strong>. Pendant une dizaine d’années, j’ai développé des solutions en <strong>SQL Server, VB6, VB.NET et ASP.NET</strong>.
+        </p>
 
-      <div className='competences'>
+        <p>
+          Par la suite, j’ai occupé divers postes en <strong>support IT, achats et services généraux</strong>. Toutefois, le développement est resté une constante dans
+          mon parcours : en parallèle de mon activité professionnelle, j’ai continué à coder en <strong>autodidacte</strong>, travaillant sur plusieurs projets personnels.
+        </p>
 
-        <h1>Compétences</h1>
+        <p>
+          En <strong>2023</strong>, j’ai décidé de revenir à mon premier domaine de prédilection : le développement web. D’abord orienté vers le <strong>front-end</strong>, mon objectif est d’évoluer également vers le <strong>back-end</strong> afin de devenir un développeur full-stack.
+        </p>
+
+        <p>
+          En <strong>2024</strong>, j’ai concrétisé cette transition professionnelle en intégrant une formation intensive de <strong>6 mois chez OpenClassrooms</strong> pour actualiser
+          et approfondir mes compétences en développement web.
+        </p>
+
+        <p>
+          Toujours en veille technologique, curieux et déterminé, je suis prêt à relever de nouveaux défis et à contribuer à des projets innovants.
+        </p>
+
+      </section>
+
+      <section>
+        <img className="imgHome2" src={picHome} alt="imgHome2" />
+      </section>
+
+      <section className='competences'>
+
+        <h2>COMPETENCES</h2>
 
         <div className='logoCards'>
-
 
           {competencesObj.map((competence, index) => (
             <div className='logoCard' key={index}>
@@ -58,24 +94,39 @@ function Home() {
             </div>
           ))}
 
-          {/* 
-          <div className='logoCard'>
-            <img className='logoCompetences' src={logoCSS} alt="logoCompetences" />
-            <div>CSS</div>
-            <ProgressBar now={progress} label={`${progress}%`} />
+        </div>
+
+      </section>
+
+      <section className='training'>
+
+        <h2>FORMATIONS</h2>
+
+        <div className="trainingCards">
+
+          <div className='trainingCard'>
+            <span className="trainingTitle">DEVELOPPEUR Web</span>
+            <Badge bg="primary" className='trainingDate'>📅 09/2024 - 03/2025</Badge>
+            <span className='trainingSchool'> 🏫 OpenClassrooms (Paris à distance)</span>
+            <span className='trainingLocation'>📍Paris à distance</span>
+            <span className="trainingLevel">🎓Niveau 5 (Bac+2)</span>
           </div>
 
-          <div className='logoCard'>
-            <img className='logoCompetences' src={logoCSS} alt="logoCompetences" />
-            <div>CSS</div>
-            <ProgressBar now={progress} label={`${progress}%`} />
-          </div> */}
-
+          <div className='trainingCard'>
+            <span className="trainingTitle">Génie Electrique et Informatique Industrielle</span>
+            <Badge bg="primary" className='trainingDate'>📅 09/1997 - 03/1998</Badge>
+            <span className='trainingSchool'> 🏫 Institut Universitaire Professionalisé</span>
+            <span className='trainingLocation'>📍Valenciennes</span>
+            <span className="trainingLevel">🎓(Bac+4)</span>
+          </div>
 
         </div>
 
-      </div>
 
+
+
+
+      </section>
 
     </div>
   )

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Header.scss'
+import picHome2 from '../../assets/home2.webp';
 
 /**
  * 
@@ -10,13 +11,15 @@ function Header() {
   //
   return (
 
-    <nav className="navbar">
+    <nav className="headerNavbar">
+
+
 
       <div className="navbar_text">
         <span>DEVELOPPEUR WEB</span>
       </div>
 
-   
+
 
       <div className='navbar__btn'>
 
@@ -46,6 +49,8 @@ function Header() {
         </NavLink>
 
       </div>
+
+      <img className="navBarImg" src={picHome2} alt="picHome2" />
 
     </nav>
 
