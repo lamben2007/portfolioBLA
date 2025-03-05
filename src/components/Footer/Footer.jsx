@@ -1,11 +1,21 @@
 import { Button, Image } from "react-bootstrap";
 import picHome2 from '../../assets/home2.webp';
 import logoLinkedIn from '../../assets/logoLinkedin.webp';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Footer.scss'
 
 
 function Footer() {
+
+  //
+  const navigate = useNavigate();
+
+  //
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
+  //
   return (
     <div className="divFooter">
 
@@ -45,7 +55,7 @@ function Footer() {
 
           <img src={logoLinkedIn} alt="logoLinkedIn" />
 
-          <Button variant="primary">Contactez-moi</Button>
+          <Button variant="primary" onClick={handleClick}>Contactez-moi</Button>
 
         </div>
 

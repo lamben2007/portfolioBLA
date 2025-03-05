@@ -149,6 +149,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       width: 100%;
+      gap: 5px;
 
       .trainingCard {
         display: flex;
@@ -187,5 +188,17 @@
   .divHome {
     row-gap: 0px;
     padding: 0px 45px;
+
+    .section2 {
+      font-size: 15px;
+    }
+
+    .training {
+      .trainingCards {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ProgressBar, Badge } from "react-bootstrap";
 import picHome2 from '../../assets/home2.webp';
 import picHome from '../../assets/home.webp';
@@ -15,6 +16,11 @@ import './Home.scss';
 
 //
 function Home() {
+
+  //
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   //
   const competencesObj = [
@@ -43,10 +49,9 @@ function Home() {
       <section className='section2'>
 
         <h2><strong>Passionné par l’Informatique et le Développement </strong></h2>
-        <p>---</p>
 
         <p>
-          Depuis toujours, le développement informatique est une véritable passion pour moi. Mon parcours a commencé avec la programmation en Basic sur un MSX,
+          Depuis toujours, le développement informatique est une véritable passion pour moi. Mon parcours a commencé très jeune, avec la programmation en Basic sur un ordinateur familial MSX,
           où je créais mes premiers petits jeux. Cette curiosité m&apos;a naturellement conduit à explorer différentes technologies telles que Turbo Pascal,
           C et Visual Basic 6.
         </p>

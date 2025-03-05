@@ -6,6 +6,16 @@ import './ProjetKasa.scss';
 function ProjetKasa() {
 
     //
+    const handleClickGitHub = () => {
+        window.open("https://github.com/lamben2007/Projet5_kasa", "_blank", "noopener,noreferrer");
+    };
+
+    //
+    const handleClickSite = () => {
+        window.open("https://lamben2007.github.io/portfolioBLA/", "_blank", "noopener,noreferrer");
+    };
+
+    //
     return (
 
         <div className='projectCard'>
@@ -59,8 +69,9 @@ function ProjetKasa() {
                 <div>Liste des aperçus</div>
             </div>
 
-            <div>
-                <Button variant="primary">Visiter le site</Button>
+            <div className="projectButtons">
+                <Button variant="primary" className="projectButton" onClick={handleClickGitHub}>GitHub</Button>
+                <Button variant="primary" className="projectButton" onClick={handleClickSite}>Site</Button>
             </div>
 
         </div>

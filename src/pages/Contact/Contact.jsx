@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Form, Button, Row, Col } from "react-bootstrap";
 import './Contact.scss';
 
 
 //
 function Contact() {
+
+  //
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   //
   const [formData, setFormData] = useState({
@@ -36,7 +41,7 @@ function Contact() {
 
       <h2 className="mb-4">Formulaire de Contact</h2>
       <Form onSubmit={handleSubmit}>
-      
+
         {/* Ligne Nom & Prénom */}
         <Row className="mb-3">
           <Col md={6}>

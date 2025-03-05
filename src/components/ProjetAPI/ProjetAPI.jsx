@@ -1,8 +1,14 @@
+import { Button } from "react-bootstrap";
 import './ProjetAPI.scss';
 
 
 //
 function ProjetAPI() {
+
+    //
+    const handleClickGitHub = () => {
+        window.open("https://github.com/lamben2007/Projet6", "_blank", "noopener,noreferrer");
+    };
 
     //
     return (
@@ -52,6 +58,10 @@ function ProjetAPI() {
             <div>
                 <h3>Aperçus des interfaces</h3>
                 <div>Liste des aperçus</div>
+            </div>
+
+            <div className="projectButtons">
+                <Button variant="primary" className="projectButton" onClick={handleClickGitHub}>GitHub</Button>
             </div>
 
         </div>

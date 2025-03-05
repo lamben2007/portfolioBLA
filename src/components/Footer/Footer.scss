@@ -14,7 +14,6 @@
     width: 100%;
     justify-content: space-around;
 
-
     .circlePicture {
       width: 300px;
       height: 300px;
@@ -73,9 +72,37 @@
   .divFooter {
     justify-content: center;
     gap: 10px;
-    .divFooter__copyright {
-      font-size: 12px;
-      width: 130px;
+
+    .divFooter1 {
+      flex-direction: column;
+      align-items: center;
+
+      .navbar__btn {
+        height: 70px;
+        .navbar__link {
+          font-size: 10px;
+        }
+      }
+
+      .socialNetwork {
+        width: 30%;
+        gap: 10px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .circlePicture {
+        display: none;
+      }
+    }
+
+    .divFooter2 {
+      .divFooter__copyright {
+        font-size: 12px;
+        width: 130px;
+      }
     }
   }
 }
