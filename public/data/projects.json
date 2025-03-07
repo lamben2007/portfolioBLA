@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Application de location immobilière",
+        "description": "Développement de l&apos;interface utilisateur d&apos;une application immobilière avec React",
+        "objectif": [
+            "- Créer l'interface utilisateur de l'application de location immobilière en React.",
+            "- Objectif client : Développer une application de type \"single-page\" conforme à une maquette fournie.",
+            "- Implémenter l'ensemble des pages avec des fonctionnalités interactives.",
+            "- Simuler les requêtes API via des fichiers JSON en attendant l'intégration du backend."
+        ],
+        "completedProjects": [
+            "- Développement d&apos;une application REACT",
+            "- Création de composants réutilisables : Header, Footer, Host, Banner, Card, Collapse, Logo, Rating.",
+            "- Configuration du routeur pour une navigation fluide entre les pages (accueil, à propos, détail des logements, et page 404)",
+            "- Utilisation de useState et useEffect pour récupérer et gérer les données des logements, d&apos;un logement spécifique et des éléments repliables.",
+            "- Ajout d&apos;animations pour les éléments repliables et le carrousel."
+        ],
+        "technologiesUsed": [
+            "HTML",
+            "SCSS",
+            "Javascript",
+            "REACT",
+            "Responsive Design"
+        ],
+        "previews": [
+            "/assets/php.png",
+            "/assets/react.svg",
+            "/assets/mongodb.svg"
+        ],
+        "links": {
+            "github": "",
+            "site":""
+        }
+    }
+]

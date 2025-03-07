@@ -7,3 +7,4 @@ PROJET PORFOLIO
 > Déploiement sur "Github pages" : npm run deploy
 
 > Exécution en local : http://localhost:5173/portfolioBLA
+> Exécution en prod : https://lamben2007.github.io/portfolioBLA/

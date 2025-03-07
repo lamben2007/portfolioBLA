@@ -1,15 +1,10 @@
 .divMyProjects {
-  font-family: "DM Serif Text";
-  font-size: 18px;
-
-  // h2 {
-  //   font-weight: bold;
-  //   font-size: 30px;
-  // }
+  // font-family: "DM Serif Text";
+  font-family: "arial";
+  font-size: 16px;
 
   h2 {
     color: #000000;
-    border: 3px solid #0d6efd;
     border-radius: 40px 0px;
     padding: 10px;
     margin-bottom: 30px;
@@ -21,13 +16,6 @@
     text-align: center;
   }
 
-  // h3 {
-  //   font-weight: bold;
-  //   font-size: 20px;
-  //   color: #175bbd;
-  //   border: 3px solid #0d6efd;
-  //   border-radius: 40px 0px;
-  // }
   h3 {
     font-weight: bold;
     font-size: 20px;
@@ -52,9 +40,6 @@
     .projectCard {
       display: flex;
       flex-direction: column;
-      // background-color: #dad8d4;
-      // background: linear-gradient(to left, #175bbb70, #e8ecee);
-      // background: linear-gradient(to left, rgb(139 168 209 / 44%), #e8ecee);
       background: linear-gradient(
         60deg,
         rgba(114, 101, 89, 0.6),
@@ -69,6 +54,31 @@
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
       gap: 15px;
       padding: 15px;
+
+      .projectTechnoList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .projectTechno {
+          background-color: #0d6efd;
+          font-size: 20px;
+          border-radius: 5px;
+          padding: 5px;
+          color: white;
+        }
+      }
+
+      .projectPreviewsList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .projectPreview {
+          width: 100px;
+          height: 100px;
+        }
+      }
 
       .projectButtons {
         display: flex;
@@ -86,8 +96,14 @@
 
 /* Responsive styles for small devices */
 @media (max-width: 767.98px) {
-  .projectCards {
-    flex-direction: column;
-    align-content: center;
+  .divMyProjects {
+    .projectCards {
+      flex-direction: column;
+      align-content: center;
+
+      .projectCard {
+        width: 90%;
+      }
+    }
   }
 }

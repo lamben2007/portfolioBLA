@@ -13,12 +13,9 @@ function Header() {
 
     <nav className="headerNavbar">
 
-
-
       <div className="navbar_text">
         <span>DEVELOPPEUR WEB</span>
       </div>
-
 
 
       <div className='navbar__btn'>
@@ -36,7 +33,7 @@ function Header() {
           className={({ isActive }) => (isActive ? 'navbar__link navbar__link--underline' : 'navbar__link')}
           end
         >
-          Mes réalisations
+          Réalisations
         </NavLink>
 
 

@@ -1,0 +1,14 @@
+[
+    { "urlLogo": "/assets/css.svg", "title": "CSS"},
+    { "urlLogo": "/assets/html.svg", "title": "HTML" },
+    { "urlLogo": "/assets/javascript.svg", "title": "JS"},
+    { "urlLogo": "/assets/react.svg", "title": "REACT" },
+    { "urlLogo": "/assets/redux.svg", "title": "REDUX (toolkit)"},
+    { "urlLogo": "/assets/sass.svg", "title": "SASS"},
+    { "urlLogo": "/assets/typescript.svg", "title": "TYPESCRIPT" },
+    { "urlLogo": "/assets/node.svg", "title": "NODEJS" },
+    { "urlLogo": "/assets/nestjs.svg", "title": "NESTJS" },
+    { "urlLogo": "/assets/mongodb.svg", "title": "MONGODB"},
+    { "urlLogo": "/assets/php.png", "title": "PHP" },
+    { "urlLogo": "/assets/mysql.svg", "title": "MySQL" }
+]

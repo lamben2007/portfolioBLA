@@ -2,6 +2,7 @@ import { Button, Image } from "react-bootstrap";
 import picHome2 from '../../assets/home2.webp';
 import logoLinkedIn from '../../assets/logoLinkedin.webp';
 import { NavLink, useNavigate } from 'react-router-dom';
+import myCV from '../../assets/eCV.pdf';
 import './Footer.scss'
 
 
@@ -11,8 +12,18 @@ function Footer() {
   const navigate = useNavigate();
 
   //
-  const handleClick = () => {
+  const handleClickLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/benoit-lamour/", "_blank", "noopener,noreferrer");
+  };
+
+  //
+  const handleClickContact = () => {
     navigate("/contact");
+  };
+
+  //
+  const handleClickOpenPDF = () => {
+    window.open(myCV, "_blank");
   };
 
   //
@@ -53,9 +64,13 @@ function Footer() {
 
           <span>Réseaux sociaux</span>
 
-          <img src={logoLinkedIn} alt="logoLinkedIn" />
+          <button className="buttonLinkedIn" onClick={handleClickLinkedIn}>
+            <img src={logoLinkedIn} alt="buttonLinkedIn" />
+          </button>
 
-          <Button variant="primary" onClick={handleClick}>Contactez-moi</Button>
+          <Button variant="primary" onClick={handleClickContact}>Contactez-moi</Button>
+          
+          <Button variant="primary" onClick={handleClickOpenPDF}>Mon CV</Button>
 
         </div>
 

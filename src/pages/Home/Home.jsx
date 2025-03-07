@@ -1,18 +1,9 @@
 import { useEffect } from 'react';
-import { ProgressBar, Badge } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import picHome2 from '../../assets/home2.webp';
 import picHome from '../../assets/home.webp';
-import logoCSS from '../../assets/css.svg';
-import logoHTML from '../../assets/html.svg';
-import logoJS from '../../assets/javascript.svg';
-import logoREACT from '../../assets/react.svg';
-import logoRedux from '../../assets/redux.svg';
-import logoSass from '../../assets/sass.svg';
-import logoTypeScript from '../../assets/typescript.svg';
-import logoNodeJS from '../../assets/node.svg';
-import logoNestJS from '../../assets/nestJS.svg';
-import logoMongoDB from '../../assets/mongodb.svg';
 import './Home.scss';
+import Skills from '../../components/Skills/Skills';
 
 //
 function Home() {
@@ -23,27 +14,12 @@ function Home() {
   }, []);
 
   //
-  const competencesObj = [
-    { "urlLogo": logoCSS, "title": "CSS", "pourcentage": 80 },
-    { "urlLogo": logoHTML, "title": "HTML", "pourcentage": 70 },
-    { "urlLogo": logoJS, "title": "JS", "pourcentage": 85 },
-    { "urlLogo": logoREACT, "title": "REACT", "pourcentage": 85 },
-    { "urlLogo": logoRedux, "title": "REDUX (toolkit)", "pourcentage": 50 },
-    { "urlLogo": logoSass, "title": "SASS", "pourcentage": 65 },
-    { "urlLogo": logoTypeScript, "title": "TYPESCRIPT", "pourcentage": 20 },
-    { "urlLogo": logoNodeJS, "title": "NODEJS", "pourcentage": 60 },
-    { "urlLogo": logoNestJS, "title": "NESTJS", "pourcentage": 10 },
-    { "urlLogo": logoMongoDB, "title": "MONGODB", "pourcentage": 50 }
-  ]
-
-  //
   return (
     <div className="divHome">
 
       <section className='section1'>
         <img className="imgHome" src={picHome2} alt="picHome2" />
-        <div className="text-overlay">Bonjour, Je suis Benoît Développeur FRONT-END</div>
-        {/* <div className="text2-overlay">Texte2</div> */}
+        <div className="text-overlay animated-text">Bonjour, Je suis Benoît Développeur FRONT-END</div>
       </section>
 
       <section className='section2'>
@@ -85,22 +61,9 @@ function Home() {
         <img className="imgHome2" src={picHome} alt="imgHome2" />
       </section>
 
-      <section className='competences'>
-
+      <section className='skills'>
         <h2>COMPETENCES</h2>
-
-        <div className='logoCards'>
-
-          {competencesObj.map((competence, index) => (
-            <div className='logoCard' key={index}>
-              <img className='logoCompetences' src={competence.urlLogo} alt="logoCompetence" />
-              <div className='logoTitle'>{competence.title}</div>
-              <ProgressBar now={competence.pourcentage} label={`${competence.pourcentage}%`} />
-            </div>
-          ))}
-
-        </div>
-
+        <Skills />
       </section>
 
       <section className='training'>
