@@ -37,60 +37,6 @@
     padding: 15px;
     gap: 20px;
 
-    .projectCard {
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(
-        60deg,
-        rgba(114, 101, 89, 0.6),
-        rgba(114, 101, 89, 0.5019607843) 0,
-        #faf9f9,
-        rgba(114, 101, 89, 0.5019607843) 90%,
-        rgba(114, 101, 89, 0.6)
-      );
-      width: 48%;
-      text-align: start;
-      border-radius: 15px;
-      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-      gap: 15px;
-      padding: 15px;
-
-      .projectTechnoList {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        .projectTechno {
-          background-color: #0d6efd;
-          font-size: 20px;
-          border-radius: 5px;
-          padding: 5px;
-          color: white;
-        }
-      }
-
-      .projectPreviewsList {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        .projectPreview {
-          width: 100px;
-          height: 100px;
-        }
-      }
-
-      .projectButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-
-        .projectButton {
-          width: 110px;
-        }
-      }
-    }
   }
 }
 
