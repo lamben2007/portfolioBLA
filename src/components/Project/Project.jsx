@@ -1,5 +1,5 @@
 // import {  useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import ReactMarkdown from 'react-markdown';
 import './Project.scss';
 import PropTypes from 'prop-types';
@@ -52,13 +52,25 @@ function Project({ projectData }) {
                     <div>
                         <h3>Aperçus des interfaces</h3>
                         <div className="projectPreviewsList">
-                            {
+                            {/* {
                                 projectData.previews.map((image, index) => {
                                     return <div key={index}>
-                                        <img className="projectPreview" src={image} alt="image" />
+                                        <img className="projectPreview" src={`${import.meta.env.BASE_URL}${image}`} alt="image" />
                                     </div>
                                 })
-                            }
+                            } */}
+
+                            <Carousel>
+                                {projectData.previews.map((image, index) => (
+                                    <Carousel.Item key={index}>
+                                        <img
+                                            className="projectPreview"
+                                            src={`${import.meta.env.BASE_URL}${image}`}
+                                            alt={`Slide ${index}`}
+                                        />
+                                    </Carousel.Item>
+                                ))}
+                            </Carousel>
                         </div>
                     </div>
 

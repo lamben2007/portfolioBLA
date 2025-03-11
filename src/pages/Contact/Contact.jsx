@@ -1,10 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Form, Button, Row, Col } from "react-bootstrap";
+import emailjs from "@emailjs/browser";
 import './Contact.scss';
 
 
 //
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_lrbt1rr", "template_4y7k3it", form.current, "3_ppLm4vFnMGV9x1a")
+      .then((result) => {
+        console.log("Email envoyé avec succès :", result);
+        alert("Message envoyé ! ID de réponse : " + result.text);
+        setFormData({ nom: "", prenom: "", email: "", societe: "", message: "" }); // Réinitialiser le formulaire
+        form.current.reset();
+      })
+      .catch((error) => {
+        alert("Erreur : " + error.text);
+      });
+  };
 
   //
   useEffect(() => {
@@ -26,11 +44,11 @@ function Contact() {
   };
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Données du formulaire :", formData);
-    alert("Formulaire envoyé !");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Données du formulaire :", formData);
+  //   alert("Formulaire envoyé !");
+  // };
 
 
 
@@ -40,7 +58,7 @@ function Contact() {
     <div className="divContact">
 
       <h2 className="mb-4">Formulaire de Contact</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form ref={form} onSubmit={sendEmail}>
 
         {/* Ligne Nom & Prénom */}
         <Row className="mb-3">

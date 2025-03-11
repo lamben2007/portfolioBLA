@@ -22,7 +22,7 @@ function MyProjects() {
         //
         const fetchData = async () => {
             try {
-                const response = await fetch("/data/projects.json");
+                const response = await fetch(`${import.meta.env.BASE_URL}data/projects.json`);
                 if (!response.ok) {
                     throw new Error("Erreur lors du chargement des données");
                 }
@@ -44,6 +44,7 @@ function MyProjects() {
     //
     return (
         <div className='divMyProjects'>
+
             <h2 className='title'>MES RÉALISATIONS</h2>
 
             <div className='projectCards'>

@@ -12,7 +12,8 @@ function Skills() {
         //
         const fetchData = async () => {
             try {
-                const response = await fetch("/data/skills.json");
+                const response = await fetch(`${import.meta.env.BASE_URL}data/skills.json`);
+
                 if (!response.ok) {
                     throw new Error("Erreur lors du chargement des données");
                 }
@@ -36,7 +37,7 @@ function Skills() {
 
             {skills.map((skill, index) => (
                 <div className='skillsCard' key={index}>
-                    <div className='skillsLogo'><img src={skill.urlLogo} alt="skillsLogo" /></div>
+                    <div className='skillsLogo'> <img src={`${import.meta.env.BASE_URL}${skill.urlLogo}`} alt="skillsLogo" /></div>
                     <div className='skillsTitle'>{skill.title}</div>
                 </div>
             ))}
