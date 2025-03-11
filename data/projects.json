@@ -23,13 +23,13 @@
             "Responsive Design"
         ],
         "previews": [
-            "assets/php.png",
-            "assets/react.svg",
-            "assets/mongodb.svg"
+            "assets/kasa1_preview.webp",
+            "assets/kasa2_preview.webp",
+            "assets/kasa3_preview.webp"
         ],
         "links": {
             "github": "https://github.com/lamben2007/Projet5_kasa",
-            "site": "https://lamben2007.github.io/portfolioBLA/"
+            "site": "https://lamben2007.github.io/Projet5_kasa"
         }
     },
     {
@@ -50,7 +50,9 @@
             "Express",
             "MongoDB"
         ],
-        "previews": [],
+        "previews": [
+            "assets/api1_preview.webp"
+        ],
         "links": {
             "github": "https://github.com/lamben2007/Projet6",
             "site": ""
@@ -76,7 +78,9 @@
             "HTML",
             "SCSS"
         ],
-        "previews": [],
+        "previews": [
+            "assets/architecte1_preview.webp"
+        ],
         "links": {
             "github": "https://github.com/lamben2007/Projet3",
             "site": ""
@@ -97,14 +101,16 @@
             "- Analyse du site afin de repérer les opportunités d'optimisation.",
             "- Configuration des balises de partage pour optimiser l’affichage sur les réseaux sociaux.",
             "- Création d’un rapport résumant les actions effectuées et les résultats obtenus."
-
         ],
         "technologiesUsed": [
             "SEO",
             "HTML",
             "JAVASCRIPT"
         ],
-        "previews": [],
+        "previews": [
+            "assets/seo1_preview.webp",
+            "assets/seo2_preview.webp"
+        ],
         "links": {
             "github": "https://github.com/lamben2007/Projet4",
             "site": "https://lamben2007.github.io/Projet4/"
