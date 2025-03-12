@@ -5,18 +5,25 @@ import './Project.scss';
 import PropTypes from 'prop-types';
 
 
-//
+/**
+ * Composant Project
+ * 
+ * Ce composant affiche la card contenant une réalisation de projet
+ * 
+ * @returns {JSX.Element} Composant card avec une réalisation de projet
+ */
 function Project({ projectData }) {
 
-    //
+    // Permet d'ouvrir un lien selon URL spécifiée
     const handleClickLink = (url) => {
         window.open(url, "_blank", "noopener,noreferrer");
     };
 
-    //
+
+    // Rendu
     return (
 
-        <div className='projectCard'>
+        <article className='projectCard'>
 
             {projectData ? (
                 <>
@@ -24,7 +31,6 @@ function Project({ projectData }) {
                     <h2><ReactMarkdown components={{ p: ({ children }) => <>{children}</> }}>{projectData.name}</ReactMarkdown></h2>
 
                     <ReactMarkdown>{projectData.description}</ReactMarkdown>
-
 
                     <div>
                         <h3>Objectif du projet</h3>
@@ -52,13 +58,6 @@ function Project({ projectData }) {
                     <div>
                         <h3>Aperçus des interfaces</h3>
                         <div className="projectPreviewsList">
-                            {/* {
-                                projectData.previews.map((image, index) => {
-                                    return <div key={index}>
-                                        <img className="projectPreview" src={`${import.meta.env.BASE_URL}${image}`} alt="image" />
-                                    </div>
-                                })
-                            } */}
 
                             <Carousel>
                                 {projectData.previews.map((image, index) => (
@@ -90,12 +89,12 @@ function Project({ projectData }) {
 
             ) : null}
 
-        </div>
+        </article>
 
     )
 }
 
-//
+// Définition de la structure de la variable "projectData"
 Project.propTypes = {
     projectData: PropTypes.shape({
         name: PropTypes.string.isRequired,

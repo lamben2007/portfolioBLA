@@ -1,30 +1,40 @@
 import { useEffect } from 'react';
 import { Badge } from "react-bootstrap";
+import Skills from '../../components/Skills/Skills';
 import picHome2 from '../../assets/home2.webp';
 import picHome from '../../assets/home.webp';
 import './Home.scss';
-import Skills from '../../components/Skills/Skills';
 
-//
+/**
+ * Composant Home
+ * 
+ * Ce composant affiche mon profil développeur WEB
+ * 
+ * @returns {JSX.Element} Page home
+ */
 function Home() {
 
-  //
+  // Traitement au chargement du composant
   useEffect(() => {
+
+    // Fait défiler la fenêtre en haut de la page lorsque le composant est monté
     window.scrollTo(0, 0);
+
   }, []);
 
-  //
+
+  // Rendu
   return (
     <div className="divHome">
 
       <section className='section1'>
         <img className="imgHome" src={picHome2} alt="picHome2" />
-        <div className="text-overlay animated-text">Bonjour, Je suis Benoît Développeur FRONT-END</div>
+        <h1 className="text-overlay animated-text">Bonjour, Je suis Benoît Développeur FRONT-END</h1>
       </section>
 
       <section className='section2'>
 
-        <h2><strong>Passionné par l’Informatique et le Développement </strong></h2>
+        <h2>Passionné par l’Informatique et le Développement</h2>
 
         <p>
           Depuis toujours, le développement informatique est une véritable passion pour moi. Mon parcours a commencé très jeune, avec la programmation en Basic sur un ordinateur familial MSX,
