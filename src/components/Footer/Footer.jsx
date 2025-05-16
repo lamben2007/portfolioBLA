@@ -86,7 +86,7 @@ function Footer() {
       </div>
 
       <div className='divFooter2'>
-        <span className="divFooter__copyright">© 2025 Portfolio. All rights reserved</span>
+        <span className="divFooter__copyright">© 2025 Portfolio BLA. All rights reserved</span>
       </div>
 
     </footer>
